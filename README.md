@@ -1,2 +1,7 @@
 # Connect4Solver
-A perfect play program to solve Connect4
+A parallelisme oriented project with :
+- Alpha-beta pruning
+- Bitboard implementation
+- Transposition Table
+- Anticipation of losing moves
+- History Heuristic
