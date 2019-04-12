@@ -19,6 +19,9 @@ public:
             b.getBitboard(1) == n.getBoard().getBitboard(1));
   }
 
+  /* Test */
+  bool isLegalIsWin(uint64_t, int);
+
 private:
   Board b;
   Info i;

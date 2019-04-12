@@ -1,23 +1,17 @@
 #include "Board.hpp"
-#include <bitset>
 
 Board::Board() {
   counter = 0;
-  for (int i = 0; i < W; i++) {
+  for (int i = 0; i < W; i++)
     height[i] = i * (H + 1);
-  }
   bitboard[0] = 0;
   bitboard[1] = 0;
 }
 
-void Board::makeMove(int col) {
-  uint64_t move = 1 << height[col]++;
-  bitboard[counter & 1] ^= move;
-  moves[counter++] = col;
-}
+void Board::makeMove(int col) { bitboard[counter++ & 1] ^= 1 << height[col]++; }
 
 bool Board::isWin(uint64_t newboard) {
-  int directions[4] = {1, H, H + 1, H + 2};
+  int directions[4] = {1, H + 1, H, H + 2};
   uint64_t bb;
   for (int direction : directions) {
     bb = newboard & (newboard >> direction);

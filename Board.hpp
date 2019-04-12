@@ -4,13 +4,6 @@
 #include <unordered_set>
 #include <vector>
 
-#ifndef W
-#define W 4
-#endif
-#ifndef H
-#define H 4
-#endif
-
 class Board {
 public:
   Board();
@@ -28,5 +21,5 @@ public:
 private:
   uint64_t bitboard[2];
   char height[W];
-  int moves[W * H], counter;
+  int counter;
 };
