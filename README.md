@@ -1,18 +1,35 @@
 # Connect4Solver
-A parallelisme oriented project with :
-- Alpha-beta pruning
-- Bitboard implementation
-- Transposition Table
-- Anticipation of losing moves
 
-## Use
-    $> make
-    g++ -o exe -W -Wall -O3 -std=c++14 -pthread Board.cpp Node.cpp main.cpp -DW=4 -DH=5
-    $> make run
-    =
-    $> make clean
-## Results
+It's a parallelism-oriented project to solve Connect4 for any size.
 
-    + : victory of the player 1
-    = : tie
-    - : victory of the player 2    
+## Features
+
+- [Alpha-beta pruning](https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning)
+- [Bitboard](https://en.wikipedia.org/wiki/Bitboard) implementation
+- [Transposition Table](https://www.chessprogramming.org/Transposition_Table)
+- [Iterative Deepening](https://www.chessprogramming.org/Iterative_Deepening) Alpha Beta Search 
+<!-- - Anticipation of losing moves -->
+
+## Build
+
+Use the following command to build and run the executable target.
+
+```
+cmake -Bbuild
+cmake --build build
+./build/solver
+```
+
+To interpret the results :
+```
++ : victory of the player 1
+= : tie
+- : victory of the player 2    
+```
+
+## References
+
+- [John's Connect Four Playground](https://tromp.github.io/c4/c4.html)
+- [Solving Connect 4: how to build a perfect AI](https://blog.gamesolver.org/)
+- [Iterative Deepening Alpha Beta Search](https://gist.github.com/kartikkukreja/e58a77d6380f1af9b1f3)
+- [Bitboards and Connect Four](https://github.com/denkspuren/BitboardC4/blob/master/BitboardDesign.md)

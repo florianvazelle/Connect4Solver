@@ -1,0 +1,20 @@
+build*/
+/.idea/
+/cmake-build*/
+compile_commands.json
+/.vscode/
+/conan.log
+
+# Ignore generated Python code
+*_pb2.py
+*.egg-info
+__pycache__
+
+# clangd
+.clangd/
+/.cache/
+
+# Visual Studio
+/.vs/
+
+solver*
